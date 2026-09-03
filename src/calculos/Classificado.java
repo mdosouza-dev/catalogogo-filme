@@ -1,5 +1,5 @@
 package calculos;
 
-public interface Classificado{
+public interface Classificado {
     int getClassificacao();
 }
