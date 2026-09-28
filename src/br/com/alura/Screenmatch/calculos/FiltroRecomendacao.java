@@ -1,6 +1,4 @@
-package calculos;
-
-import br.com.alura.Screenmatch.modelos.Filme;
+package br.com.alura.Screenmatch.calculos;
 
 public class FiltroRecomendacao {
     private String recomendacao;

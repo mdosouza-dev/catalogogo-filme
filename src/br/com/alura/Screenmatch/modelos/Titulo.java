@@ -6,7 +6,29 @@ public abstract class Titulo {
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public double getSomaDasAvaliacoes() {
+        return somaDasAvaliacoes;
+    }
+
     private int duracaoEmMinutos;
+
+    public String getNome() {
+        return nome;
+    }
 
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;

@@ -1,16 +1,16 @@
+package br.com.alura.Screenmatch.principal;
+
 import br.com.alura.Screenmatch.modelos.Episodio;
 import br.com.alura.Screenmatch.modelos.Filme;
 import br.com.alura.Screenmatch.modelos.Serie;
-import calculos.CalculadoraDeTempo;
-import calculos.FiltroRecomendacao;
+import br.com.alura.Screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.Screenmatch.calculos.FiltroRecomendacao;
 
-import java.security.spec.ECPoint;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("Poderoso Chefão",1970);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
@@ -19,9 +19,7 @@ public class Principal {
         meuFilme.avalia(10);
 
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -39,6 +37,26 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        Filme filmeDois = new Filme("Avatar", 2013);
+        filmeDois.setDuracaoEmMinutos(120);
+        filmeDois.avalia(10);
+
+        Filme filmeTres = new Filme("dogville", 2003);
+        filmeTres.setDuracaoEmMinutos(120);
+        filmeTres.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDois);
+        listaDeFilmes.add(meuFilme);
+
+        System.out.println("Tamanho da Lista: " + listaDeFilmes.size());
+        System.out.println("Lista de filmes: " + listaDeFilmes);
+
+        System.out.println(listaDeFilmes);
+
+
+        
 
     }
 }

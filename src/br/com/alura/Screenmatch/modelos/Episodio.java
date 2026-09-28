@@ -1,6 +1,6 @@
 package br.com.alura.Screenmatch.modelos;
 
-import calculos.Classificado;
+import br.com.alura.Screenmatch.calculos.Classificado;
 
 public class Episodio implements Classificado {
     private int numero;
